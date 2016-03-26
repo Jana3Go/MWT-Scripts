@@ -1,0 +1,15 @@
+with open(commandfile, 'r')
+with open(devicefile, 'r')
+*	sendcommand(sshclient, ip, user, password, commands)
+		sshclient.connect
+		sshsession = sshclient.invoke_shell()
+		nopaging(sshsession)
+			sshsession.send('term len 0\n')
+			sshsession.recv(1000)
+		for
+			sshsession.send(command)
+		shclient.close()
+	outputtofile(outputfile, output)
+		with open(filename, 'w')
+			f.write(output)
+

@@ -1,0 +1,8 @@
+for l in macportlist:
+    mmac = pmac.search(l)
+    mport = pport.search(l)
+    if mmac and mport:
+        if mport.group() in lportmac:
+            print(mport.group())
+            lportmac.update({mport.group(): .update(mmac.group())})
+        lportmac.update({mport.group(): {mmac.group()}})
